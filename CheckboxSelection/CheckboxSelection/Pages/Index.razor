@@ -119,7 +119,7 @@
         }
         if (!alreadyChecked) //using this flag we can prevent  checking the already checked checkbox while paging
         {
-            await this._treeGrid.SelectCheckboxes(SelectedNodeIndex);
+            await this._treeGrid.SelectCheckboxesAsync(SelectedNodeIndex.ToArray());
         }
         alreadyChecked = false;
 
