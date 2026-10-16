@@ -50,10 +50,6 @@ dotnet restore
 dotnet run
 ```
 
-## Project Structure
-
-`Pages/Index.razor` — Contains the primary Syncfusion TreeGrid implementation, checkbox column configuration, conditional selection logic, and programmatic invocation of the `SelectCheckboxes` method.
-
 ## Support and Feedback
 
 - For general product questions, visit the [Syncfusion Community Forum](https://www.syncfusion.com/forums) or [Syncfusion Support](https://www.syncfusion.com/support).
