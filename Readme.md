@@ -1,16 +1,61 @@
-# Select Record using CheckBox column based on condition in Blazor TreeGrid
+# Select Record using CheckBox Column Based on Condition in Blazor TreeGrid
 
-This project contains how to select Tree Grid records with hierarchy selection functionality using checkbox column. We can render checkbox column by using `ShowCheckbox` property in column definition and select records at initial rendering using `SelectCheckboxes` method based on certain condition.
+## Overview
+
+This sample demonstrates conditional row selection in the Syncfusion [Blazor TreeGrid](https://www.syncfusion.com/blazor-components`) component using a checkbox column. The implementation shows how to render a checkbox selection column through the `ShowCheckbox` property and automatically select records during initial rendering by invoking the `SelectCheckboxes` method based on a predefined condition. This approach is useful when business rules require specific records to be preselected while preserving TreeGrid hierarchy-selection behavior.
 
 **Documentation**: https://blazor.syncfusion.com/documentation/treegrid/selection#checkbox-selection
 
+## Key Features
+
+- Demonstrates checkbox-based row selection in the Syncfusion TreeGrid.
+- Uses the `ShowCheckbox` property to render a selection checkbox column.
+- Uses the `SelectCheckboxes` method to programmatically select TreeGrid records.
+- Demonstrates conditional record selection during initial component rendering.
+- Supports hierarchical record selection within a TreeGrid data structure.
+- Shows how checkbox selection can be combined with parent-child data relationships.
+- Illustrates automatic selection logic without requiring user interaction.
+- Demonstrates TreeGrid selection configuration using built-in checkbox selection functionality.
+
 ## Prerequisites
 
-* Visual Studio 2022
+- Visual Studio 2022 or Visual Studio Code
+- .NET SDK compatible with the project's target framework
 
-## How to run the project
+## How to Run the Project
 
-* Checkout this project to a location in your disk.
-* Open the solution file using the Visual Studio 2022.
-* Restore the NuGet packages by rebuilding the solution.
-* Run the project.
+**Visual Studio 2022**
+
+1. Clone or download this repository.
+2. Open the solution file:
+
+   `SelectRecordUsingCheckBox.sln`
+
+3. Restore NuGet packages.
+4. Ensure the startup project is:
+
+   `SelectRecordUsingCheckBox`
+
+5. Build the solution.
+6. Run the application using `Ctrl+F5`.
+
+**Visual Studio Code**
+
+1. Open the repository folder in Visual Studio Code.
+2. Open the integrated terminal.
+3. Navigate to the project directory containing `SelectRecordUsingCheckBox.csproj`.
+
+```bash
+dotnet restore
+dotnet run
+```
+
+## Support and Feedback
+
+- For general product questions, visit the [Syncfusion Community Forum](https://www.syncfusion.com/forums) or [Syncfusion Support](https://www.syncfusion.com/support).
+- To report an issue specific to this sample, open a GitHub issue in this repository.
+- Official documentation for checkbox selection: https://help.syncfusion.com/grid-sdk/blazor/tree-grid/selection#checkbox-selection
+
+## License
+
+This is a Syncfusion sample project provided to demonstrate product usage. Review the [Syncfusion license terms](https://www.syncfusion.com/sales/pricing?category=ui-components) before using Syncfusion components in your own applications.
