@@ -1,4 +1,5 @@
-﻿@page "/"
+@page "/"
+@rendermode InteractiveServer
 
 @using System;
 @using System.Collections.Generic;
@@ -41,13 +42,13 @@
         this.TreeGridData = SelfReferenceData.GetTree();
         this.PageSizes = new List<string>() { "2", "4", "5", "10", "15", "20", "All" };
     }
-    public List<double> SelectedNodeIndex = new List<double> { };
+    public List<int> SelectedNodeIndex = new List<int> { };
     public async Task OnDataBound(object args)
     {
-        var recs = this._treeGrid.GetCheckedRecords();
-        var indx = this._treeGrid.GetCheckedRowIndexes();
+        var recs = await this._treeGrid.GetCheckedRecordsAsync();
+        var indx = await this._treeGrid.GetCheckedRowIndexesAsync();
         var currentData = this._treeGrid.GetCurrentViewRecords();
-        if (recs.Result.Count != 0) // if any record in current view has already been checked
+        if (recs.Count != 0) // if any record in current view has already been checked
         {
             if (currentData.Count > this._treeGrid.PageSettings.PageSize * this._treeGrid.PageSettings.PageCount)
             { // condition to check if page size is changed. If yes, check the checkboxes of newly included records of the page if progress value is "open"
@@ -55,7 +56,7 @@
                 foreach (var data2 in currentData)
                 {
                     alreadyChecked2 = false;
-                    foreach (var check2 in recs.Result)
+                    foreach (var check2 in recs)
                     {
                         if (data2.TaskID == check2.TaskID) // this is true if the particular page has been visited already and some records whose progress value are "Open"
                         {
@@ -79,7 +80,7 @@
             {
                 foreach (var data1 in currentData)
                 {
-                    foreach (var check in recs.Result)
+                    foreach (var check in recs)
                     {
                         if (data1.TaskID == check.TaskID) // this is true if the particular page has been visited already and some records whose progress value are "Open"
                         {
@@ -128,7 +129,7 @@
         if (args.RequestType.ToString() == "Paging") // on navigating to other pages
         {
             SelectedNodeIndex.Clear(); // clearing already saved index
-            SelectedNodeIndex = new List<double>();
+            SelectedNodeIndex = new List<int>();
 
         }
     }

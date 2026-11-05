@@ -6,11 +6,12 @@ This project contains how to select Tree Grid records with hierarchy selection f
 
 ## Prerequisites
 
-* Visual Studio 2022
+* [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/) or later with the **.NET desktop development** workload
+* [.NET 10.0 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) or later
 
 ## How to run the project
 
 * Checkout this project to a location in your disk.
-* Open the solution file using the Visual Studio 2022.
+* Open the solution file using Visual Studio 2022 or later (with .NET 10 SDK installed).
 * Restore the NuGet packages by rebuilding the solution.
 * Run the project.
