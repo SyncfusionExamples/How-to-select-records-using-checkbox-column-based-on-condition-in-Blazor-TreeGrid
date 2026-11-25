@@ -2,7 +2,7 @@
 
 ## Overview
 
-This sample demonstrates conditional row selection in the Syncfusion [Blazor TreeGrid](https://www.syncfusion.com/blazor-components`) component using a checkbox column. The implementation shows how to render a checkbox selection column through the `ShowCheckbox` property and automatically select records during initial rendering by invoking the `SelectCheckboxes` method based on a predefined condition. This approach is useful when business rules require specific records to be preselected while preserving TreeGrid hierarchy-selection behavior.
+This sample demonstrates conditional row selection in the Syncfusion [Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component using a checkbox column. The implementation shows how to render a checkbox selection column through the `ShowCheckbox` property and automatically select records during initial rendering by invoking the `SelectCheckboxes` method based on a predefined condition. This approach is useful when business rules require specific records to be preselected while preserving TreeGrid hierarchy-selection behavior.
 
 ## Key Features
 
